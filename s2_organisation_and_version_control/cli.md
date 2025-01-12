@@ -209,7 +209,7 @@ for doing this, and of other excellent frameworks for creating command line inte
 
     ```bash
     python iris_classifier.py train svm --kernel 'linear'
-    python iris_classifier.py train knn -k 5
+    python iris_classifier.py train knn --k 5
     ```
 
     e.g the `train` command now has two subcommands for training different machine learning models (in this case SVM
