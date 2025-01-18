@@ -16,6 +16,7 @@ def show_image_and_target(images: torch.Tensor, target: torch.Tensor) -> None:
         ax.axis("off")
     plt.show()
 
+
 def dataset_statistics(datadir: str = "data") -> None:
     """Compute dataset statistics."""
     train_dataset = MnistDataset(data_folder=datadir, train=True)
@@ -28,9 +29,9 @@ def dataset_statistics(datadir: str = "data") -> None:
     print(f"Number of images: {len(test_dataset)}")
     print(f"Image shape: {test_dataset[0][0].shape}")
 
-    #show_image_and_target(train_dataset.images, train_dataset.target, show=True)
-    #plt.savefig("mnist_images.png")
-    #plt.close()
+    # show_image_and_target(train_dataset.images, train_dataset.target, show=True)
+    # plt.savefig("mnist_images.png")
+    # plt.close()
 
     train_label_distribution = torch.bincount(train_dataset.target)
     test_label_distribution = torch.bincount(test_dataset.target)
